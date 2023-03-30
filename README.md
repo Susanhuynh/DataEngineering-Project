@@ -1,9 +1,5 @@
 # DE PROJECT
 
-## Test ### 
-
-Test gain
-=======
 I am trying to learning Data Engineering from hands-on project. I am following [this bootcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp) and tracking my progress here with some notes.
 
 Each week I will follow the series of [videos](https://www.youtube.com/playlist?list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb) and do the homework exercises. 
