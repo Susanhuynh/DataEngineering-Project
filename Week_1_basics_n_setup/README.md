@@ -18,3 +18,9 @@ A Dockerfile is the documents included all the commands so that Docker can know 
 
 Create pipeline.py and download sys library....
 
+- [] Install pgcli - Command Line Interface for Postgres
+- [] Run Progres image and create new empty database
+- [] Access new database by progres through pgcli
+- [] Load CSV data file to our new database on Postgres by Jupyter Notebook
+
+
