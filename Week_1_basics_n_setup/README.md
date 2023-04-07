@@ -26,16 +26,16 @@ Next, we run Postgres image by the code below in order that Docker will create c
 
 The first part `docker run -it` to create the image. If we dont have that image ready in the host machine, docker will pull it from registry and create image we want. `-e` is used to set evironmental variable when run docker with `docker run`.Because docker is stateless so next time when we run postgress, out database will not be there. Therefore, we need to make sure that our database is still there by mapping the folder we have in our host machine to folder in host machine. This is called `mounting` and we use `-v` and mapping. 
 
-        `docker run -it  
+        docker run -it  
          -e POSTGRES_USER="root" \  
          -e POSTGRES_PASSWORD="root" \  
          -e POSTGRES_DB="ny_taxi" \  
          -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \  
          -p 5432:5432 \  
-        postgres:13`
+        postgres:13
 
-`-e POSTGRES_USER="root"`: The name of our PostgreSQL user.<br>  
-`-e POSTGRES_PASSWORD="root"`: Password of our PostgreSQL user  
+`-e POSTGRES_USER="root"`: The name of our PostgreSQL user.  
+`-e POSTGRES_PASSWORD="root"`: Password of our PostgreSQL user.
 `-e POSTGRES_DB="ny_taxi"`: Name of our database  
 
 - [x] Access new database by progres through pgcli
