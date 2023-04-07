@@ -25,8 +25,8 @@ Next, we run Postgres image by the code below in order that Docker will create c
 
 The first part `docker run -it` to create the image. If we dont have that image ready in the host machine, docker will pull it from registry and create image we want. 
 
-`docker run -it \
- -e POSTGRES_USER="root" \
+`docker run -it \`
+ `-e POSTGRES_USER="root" \`
  -e POSTGRES_PASSWORD="root" \
  -e POSTGRES_DB="ny_taxi" \
  -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \
@@ -35,13 +35,3 @@ postgres:13`
 
 - [] Access new database by progres through pgcli
 - [] Load CSV data file to our new database on Postgres by Jupyter Notebook
-
-
-`docker run -it \
- -e POSTGRES_USER="root" \
- -e POSTGRES_PASSWORD="root" \
- -e POSTGRES_DB="ny_taxi" \
- -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \
- -p 5432:5432 \
-postgres:13`
-
