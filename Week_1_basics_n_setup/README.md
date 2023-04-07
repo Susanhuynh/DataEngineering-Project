@@ -24,21 +24,22 @@ Install Command Line Interface for Postgress. It is a Python library. Because we
 
 Next, we run Postgres image by the code below in order that Docker will create container with Postgres environment where we can upload our NY TAXI database there. 
 
-The first part `docker run -it` to create the image. If we dont have that image ready in the host machine, docker will pull it from registry and create image we want. 
+The first part `docker run -it` to create the image. If we dont have that image ready in the host machine, docker will pull it from registry and create image we want. `-e` is used to set evironmental variable when run docker with `docker run`.Because docker is stateless so next time when we run postgress, out database will not be there. Therefore, we need to make sure that our database is still there by mapping the folder we have in our host machine to folder in host machine. This is called `mounting` and we use `-v` and mapping. 
 
-`docker run -it 
-
- -e POSTGRES_USER="root" \
-
- -e POSTGRES_PASSWORD="root" \
-
- -e POSTGRES_DB="ny_taxi" \
-
- -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \
-
- -p 5432:5432 \
- 
+`docker run -it <br>
+ -e POSTGRES_USER="root" \<br>
+ -e POSTGRES_PASSWORD="root" \<br>
+ -e POSTGRES_DB="ny_taxi" \<br>
+ -v $(pwd)/ny_taxi_postgres_data:/var/lib/postgresql/data \<br>
+ -p 5432:5432 \<br>
 postgres:13`
 
-- [] Access new database by progres through pgcli
+`-e POSTGRES_USER="root"`: The name of our PostgreSQL user
+`-e POSTGRES_PASSWORD="root"`: Password of our PostgreSQL user
+`-e POSTGRES_DB="ny_taxi"`: Name of our database
+
+- [x] Access new database by progres through pgcli
+`pgcli -h localhost -p 5432 -u root -d ny_taxi`
+
 - [] Load CSV data file to our new database on Postgres by Jupyter Notebook
+
