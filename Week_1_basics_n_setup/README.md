@@ -35,8 +35,8 @@ The first part `docker run -it` to create the image. If we dont have that image 
         postgres:13
 
 `-e POSTGRES_USER="root"`: The name of our PostgreSQL user.  
-`-e POSTGRES_PASSWORD="root"`: Password of our PostgreSQL user.
-`-e POSTGRES_DB="ny_taxi"`: Name of our database  
+`-e POSTGRES_PASSWORD="root"`: Password of our PostgreSQL user.  
+`-e POSTGRES_DB="ny_taxi"`: Name of our database.  
 
 - [x] Access new database by progres through pgcli
 `pgcli -h localhost -p 5432 -u root -d ny_taxi`
