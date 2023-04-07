@@ -19,7 +19,9 @@ A Dockerfile is the documents included all the commands so that Docker can know 
 Create pipeline.py and download sys library....
 
 - [x] Install pgcli - Command Line Interface for Postgres
+
 Install Command Line Interface for Postgress. It is a Python library. Because we put our database in Postgres therefore we need to use cli for Postgres to access our database. 
+
 - [x] Run Progres image and create new empty database
 
 Next, we run Postgres image by the code below in order that Docker will create container with Postgres environment where we can upload our NY TAXI database there. 
@@ -38,7 +40,7 @@ The first part `docker run -it` to create the image. If we dont have that image 
 `-e POSTGRES_PASSWORD="root"`: Password of our PostgreSQL user.  
 `-e POSTGRES_DB="ny_taxi"`: Name of our database.  
 
-- [x] Access new database by progres through pgcli
+- [x] Access new database by progres through pgcli:  
 `pgcli -h localhost -p 5432 -u root -d ny_taxi`
 
 - [] Load CSV data file to our new database on Postgres by Jupyter Notebook
